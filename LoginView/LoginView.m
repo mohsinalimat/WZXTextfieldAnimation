@@ -72,7 +72,7 @@
 {
     if (_textfield.text.length>0)
     {
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             _placeLabel.textColor = PColor;
             _groundView.layer.borderColor = [UIColor grayColor].CGColor;
         } completion:^(BOOL finished) {
@@ -84,7 +84,7 @@
     {
         CGRect rect = _placeLabel.frame;
         rect.origin.y = self.frame.size.height/2.0;
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             _placeLabel.frame = rect;
             _placeLabel.textColor = PColor;
             _groundView.layer.borderColor = [UIColor grayColor].CGColor;
