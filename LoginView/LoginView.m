@@ -34,7 +34,7 @@
 {
     _textfield = [[UITextField alloc]initWithFrame:CGRectMake(self.frame.size.height/2.0,0, self.frame.size.width - self.frame.size.height, self.frame.size.height)];
     _textfield.delegate = self;
-    _textfield.placeholder = title;
+    _textfield.placeholder = [NSString stringWithFormat:@" %@ ",title];
     _textfield.font = [UIFont boldSystemFontOfSize:20];
     _textfield.clearButtonMode = UITextFieldViewModeWhileEditing;
     _textfield.tintColor = WColor;
@@ -90,7 +90,7 @@
             _groundView.layer.borderColor = [UIColor grayColor].CGColor;
         } completion:^(BOOL finished) {
             _placeLabel.hidden = YES;
-            _textfield.placeholder = _title;
+            _textfield.placeholder =[NSString stringWithFormat:@" %@ ",_title];
             [_textfield resignFirstResponder];
         }];
     }
