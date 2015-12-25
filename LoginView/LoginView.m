@@ -69,6 +69,7 @@
 }
 -(void)hide
 {
+     [_textfield resignFirstResponder];
     if (_textfield.text.length>0)
     {
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -76,7 +77,6 @@
             _groundView.layer.borderColor = [UIColor grayColor].CGColor;
         } completion:^(BOOL finished) {
             _placeLabel.hidden = YES;
-            [_textfield resignFirstResponder];
         }];
     }
     else
@@ -90,7 +90,6 @@
         } completion:^(BOOL finished) {
             _placeLabel.hidden = YES;
             _textfield.placeholder =[NSString stringWithFormat:@" %@ ",_title];
-            [_textfield resignFirstResponder];
         }];
     }
 }
