@@ -65,7 +65,6 @@
 }
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    
     return YES;
 }
 -(void)hide
@@ -83,7 +82,7 @@
     else
     {
         CGRect rect = _placeLabel.frame;
-        rect.origin.y = self.frame.size.height/2.0;
+        rect.origin.y = self.frame.size.height/2.0 - 10;
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             _placeLabel.frame = rect;
             _placeLabel.textColor = PColor;
