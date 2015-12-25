@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    view = [[LoginView alloc]initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 80) andTitle:@"Name"];
+    view = [[LoginView alloc]initWithFrame:CGRectMake(30, 300, self.view.frame.size.width - 60, 60) andTitle:@"Name"];
     [self.view addSubview:view];
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
